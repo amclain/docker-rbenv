@@ -8,3 +8,4 @@ ENV PATH $HOME/.rbenv/bin:$PATH
 ENV PATH $HOME/.rbenv/shims:$PATH
 # RUN echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
 RUN echo 'eval "$(rbenv init -)"' >> ~/.bashrc
+CMD /bin/bash
