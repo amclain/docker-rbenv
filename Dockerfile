@@ -7,3 +7,5 @@ ENV RBENV_PATH /root/.rbenv
 RUN git clone https://github.com/sstephenson/rbenv.git $RBENV_PATH
 RUN git clone https://github.com/sstephenson/ruby-build.git ${RBENV_PATH}/plugins/ruby-build
 ENV PATH /root/.rbenv/bin:/root/.rbenv/shims:$PATH
+ONBUILD RUN cd $RBENV_PATH; git pull
+ONBUILD RUN cd ${RBENV_PATH}/plugins/ruby-build; git pull
